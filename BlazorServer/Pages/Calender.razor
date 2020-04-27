@@ -1,0 +1,24 @@
+﻿@page "/calender"
+<DxCalendar EnableMultiSelect="true"
+            SelectedDatesChanged="OnSelectedDatesChanged"
+            SelectedDates="@SelectedDates">
+</DxCalendar>
+
+@foreach (DateTime date in SelectedDates)
+{
+    <p>
+        @date.ToShortDateString()
+    </p>
+}
+
+@code{
+    List<DateTime> SelectedDates = new List<DateTime>();
+
+    void OnSelectedDatesChanged(IEnumerable<DateTime> selectedDates)
+    {
+        SelectedDates = selectedDates.ToList();
+        InvokeAsync(StateHasChanged);
+   
+    
+    }
+}

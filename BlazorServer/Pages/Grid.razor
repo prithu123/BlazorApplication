@@ -1,0 +1,22 @@
+﻿@page "/grid"
+<h3>Grid</h3>
+@inherits NewsListBase
+@using BlazorServer.Data
+
+@if (newsList == null)
+{
+    <div class="spinner-grow"></div>
+}
+else
+{
+
+<DxDataGrid DataAsync="@NewsListGrid" VerticalScrollBarMode="@ScrollBarMode.Visible" ShowFilterRow="false">
+    <DxDataGridColumn Field="@nameof(NewsItem.Author)" SortOrder=DataGridColumnSortOrder.Ascending>
+    </DxDataGridColumn>
+    <DxDataGridColumn Field="@nameof(NewsItem.Title)" SortOrder=DataGridColumnSortOrder.Ascending>
+    </DxDataGridColumn>
+  
+
+</DxDataGrid>
+
+}

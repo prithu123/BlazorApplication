@@ -1,0 +1,27 @@
+﻿@page "/newslist"
+<h3>Component</h3>
+@inherits NewsListBase
+
+
+
+@if (newsList == null)
+{
+    <div class="spinner-grow"></div>
+}
+else
+{
+
+<div class="card-deck">
+    @foreach (var newsItem in newsList)
+    {
+      <div class="card m-2" style="min-width: 18rem; max-width:30.5% ;max-height:10.5%">
+          <div class="card-header">
+              <h4>@newsItem.Author</h4>
+          </div>
+          <img class="loading" src="@newsItem.ImageUrl" style="width:100px ;height:100px" />
+      </div>
+    }
+
+
+</div>
+}

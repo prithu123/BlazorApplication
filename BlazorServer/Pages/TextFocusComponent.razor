@@ -1,0 +1,17 @@
+﻿@page "/focus"
+@inject IJSRuntime JSRuntime;
+
+
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<DxTextBox CssClass="my-text-box" />
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeAsync<string>("focusEditor", "my-text-box");
+    }
+}

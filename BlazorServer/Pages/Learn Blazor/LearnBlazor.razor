@@ -1,0 +1,15 @@
+﻿@page "/learnblazor"
+<h3>LearnBlazor</h3>
+
+<p> Enter your Name &nbsp; <input @bind="name" @bind:event="oninput"/>: </p>
+
+<p> I am @name</p>
+<p><button @onclick="nameChange">Change Name !</button> </p>
+
+@code {
+    string name = "prithu";
+    public void nameChange() { 
+    name="Ananya";
+    }
+
+}
