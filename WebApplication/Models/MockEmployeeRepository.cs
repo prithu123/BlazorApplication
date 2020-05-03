@@ -20,5 +20,10 @@ namespace WebApplication.Models
         {
             return empList.FirstOrDefault(obj => obj.empID == id);
         }
+
+        public IEnumerable<Employee> GetEmployees()
+        {
+            return empList;
+        }
     }
 }
