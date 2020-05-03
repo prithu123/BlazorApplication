@@ -14,8 +14,8 @@ namespace WebApplication.NewFolder
        public  HomeController(IEmployeeRepository employeeRepository ) {
             _employeeRepository = employeeRepository;
         }
-        public string index() {
-            return _employeeRepository.GetEmployee(1).empName;
+        public ViewResult index() {
+            return View(_employeeRepository.GetEmployees());
               ;
 
         }
