@@ -1,28 +1,22 @@
 ﻿@using WebApplication.Models
 @model IEnumerable<Employee>
-
-<html>
-<body>
-
-    <h2>Basic HTML Table</h2>
-
-    <table >
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>DEPARTMENT</th>
-        </tr>
+    <div class="card-deck">
 
         @foreach (var employee in Model)
         {
-        <tr>
-            <td>@employee.empID</td>
-            <td>@employee.empName</td>
-            <td>@employee.empDepartment</td>
-        </tr>
+
+        <div class="card m-3">
+            <img class="card-img-top" src="~/images/jokes.jpg" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">@employee.empName</h4>
+                <p class="card-text">@employee.empDepartment</p>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">View</a>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-primary">Delete</a>
+
+                </div>
+            </div>
+        </div>
         }
-
-    </table>
-
-</body>
-</html>
+    </div>
