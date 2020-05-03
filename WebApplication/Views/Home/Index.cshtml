@@ -11,7 +11,7 @@
                 <h4 class="card-title">@employee.empName</h4>
                 <p class="card-text">@employee.empDepartment</p>
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-primary">View</a>
+                    <a asp-controller="home" asp-action="detail" asp-route-id="@employee.empID" class="btn btn-primary">View</a>
                     <a href="#" class="btn btn-primary">Edit</a>
                     <a href="#" class="btn btn-primary">Delete</a>
 
