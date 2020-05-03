@@ -19,5 +19,10 @@ namespace WebApplication.NewFolder
               ;
 
         }
+
+        public ViewResult detail(int id) {
+            return View(_employeeRepository.GetEmployee(id));
+        
+        }
     }
 }

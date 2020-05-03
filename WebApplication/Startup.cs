@@ -31,12 +31,13 @@ namespace WebApplication
 
 
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            // app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes =>
+            { routes.MapRoute("default", "{controller=Home}/{action=index}/{id?}");
+            }
+            ); 
 
-                app.Run( async (context)=>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                
             
         }
     }
