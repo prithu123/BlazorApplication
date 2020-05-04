@@ -24,5 +24,23 @@ namespace WebApplication.NewFolder
             return View(_employeeRepository.GetEmployee(id));
         
         }
+
+        [HttpGet]
+        public ViewResult create()
+        {
+            return View();
+
+        }
+        [HttpPost]
+        public IActionResult create(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                Employee newEmployee = _employeeRepository.Add(employee);
+                return RedirectToAction("detail", new { id = newEmployee.ID });
+            }
+            return View();
+
+        }
     }
 }

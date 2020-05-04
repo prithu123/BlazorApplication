@@ -8,10 +8,10 @@
         <div class="card m-3">
             <img class="card-img-top" src="~/images/jokes.jpg" alt="Card image">
             <div class="card-body">
-                <h4 class="card-title">@employee.empName</h4>
-                <p class="card-text">@employee.empDepartment</p>
+                <h4 class="card-title">@employee.Name</h4>
+                <p class="card-text">@employee.Department</p>
                 <div class="card-footer text-center">
-                    <a asp-controller="home" asp-action="detail" asp-route-id="@employee.empID" class="btn btn-primary m-1">View</a>
+                    <a asp-controller="home" asp-action="detail" asp-route-id="@employee.ID" class="btn btn-primary m-1">View</a>
                     <a href="#" class="btn btn-primary m-1">Edit</a>
                     <a href="#" class="btn btn-primary m-1">Delete</a>
 

@@ -10,20 +10,29 @@ namespace WebApplication.Models
         public List<Employee> empList;
        public MockEmployeeRepository() {
             empList = new List<Employee> {
-              new Employee(){empID=1, empName="Prithu",empDepartment="CSE",empEmail="prithu.paul1907@gmail.com"},
-              new Employee(){empID=2, empName="Arghya",empDepartment="CSE",empEmail="arghya.paul@gmail.com"},
-              new Employee(){empID=3, empName="Subho",empDepartment="IT",empEmail="subhajit.paul1907@gmail.com"},
+              new Employee(){ID=1, Name="Prithu",Department=Dept.CSE,Email="prithu.paul1907@gmail.com"},
+              new Employee(){ID=2, Name="Arghya",Department=Dept.HR,Email="arghya.paul@gmail.com"},
+              new Employee(){ID=3, Name="Subho",Department=Dept.IT,Email="subhajit.paul1907@gmail.com"},
 
          };
         }
+
+        public Employee Add(Employee employee)
+        {
+            employee.ID = empList.Max(e => e.ID) + 1;
+            empList.Add(employee);
+            return employee;
+        }
+
         public Employee GetEmployee(int id)
         {
-            return empList.FirstOrDefault(obj => obj.empID == id);
+            return empList.FirstOrDefault(obj => obj.ID == id);
         }
 
         public IEnumerable<Employee> GetEmployees()
         {
             return empList;
         }
+
     }
 }
