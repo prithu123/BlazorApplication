@@ -1,7 +1,12 @@
 ﻿@using WebApplication.Models
 @model Employee
 
-@{
+<div class="card m-3">
+        <img class="card-img-top" src="~/images/jokes.jpg" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Name</h4>
+            <p class="card-text">@Model.Department</p>
+           
+        </div>
+    </div>
 
-    <h1>@Model.empName</h1>
-}
