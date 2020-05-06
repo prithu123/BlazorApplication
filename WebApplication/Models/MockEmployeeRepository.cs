@@ -24,6 +24,11 @@ namespace WebApplication.Models
             return employee;
         }
 
+        public Employee Delete(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
         public Employee GetEmployee(int id)
         {
             return empList.FirstOrDefault(obj => obj.ID == id);
@@ -34,5 +39,9 @@ namespace WebApplication.Models
             return empList;
         }
 
+        public Employee Update(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
