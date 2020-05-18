@@ -1,0 +1,21 @@
+﻿@page "/devexpress"
+<h3>DevExpressTree</h3>
+<DxTreeView >
+    <Nodes>
+        <DxTreeViewNode Name="Overview" Text="Overview" NavigateUrl="https://demos.devexpress.com/blazor/" />
+        <DxTreeViewNode Name="Editors" Text="Data Editors" Expanded="true">
+            <Nodes>
+                <DxTreeViewNode Text="Calendor" NavigateUrl="/calender" />
+                <DxTreeViewNode Text="ComboBox" NavigateUrl="/combo" />
+                <DxTreeViewNode Text="IndianCityInfo" NavigateUrl="/city" />
+            </Nodes>
+        </DxTreeViewNode>
+        <DxTreeViewNode Name="FormLayout" Text="Form Layout" NavigateUrl="https://demos.devexpress.com/blazor/FormLayout" BadgeText="Upd" />
+        <DxTreeViewNode Name="TreeView" Text="TreeView" NavigateUrl="https://demos.devexpress.com/blazor/TreeView" BadgeText="New" />
+        <DxTreeViewNode Name="Tabs" Text="Tabs" NavigateUrl="https://demos.devexpress.com/blazor/Tabs" Visible="false" BadgeText="New" />
+    </Nodes>
+</DxTreeView>
+
+@code {
+
+}

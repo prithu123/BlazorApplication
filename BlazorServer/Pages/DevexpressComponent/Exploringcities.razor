@@ -1,0 +1,52 @@
+﻿@page "/city"
+@using Data
+<h3>City</h3>
+
+
+    <DxFormLayout Data="@city" ItemUpdating="@((fieldName, newValue) => OnItemUpdating(fieldName, newValue))">
+        <DxFormLayoutItem Field="@nameof(IndianCity.CityName)" Caption="CityName:" />
+        <DxFormLayoutItem Field="@nameof(IndianCity.state)" Caption="State:" />
+        <DxFormLayoutItem Field="@nameof(IndianCity.region)" Caption="Region:" />
+
+        <DxButton SubmitFormOnClick="true" Text="Submit" RenderStyle="@ButtonRenderStyle.Secondary" Click="@OnSubmit" />
+
+    </DxFormLayout>
+
+
+@code {
+    BlazorServer.Data.IndianCity city = new Data.IndianCity()
+    {
+        state = "Karnataka",
+        CityName = "Bengaluru",
+        region = "South",
+        Id = 6,
+        CountryId = 100
+    };
+
+    void OnItemUpdating(string fieldName, object newValue)
+    {
+        if (fieldName == nameof(IndianCity.CityName))
+        {
+            city.CityName = newValue.ToString();
+        }
+        else if (fieldName == nameof(IndianCity.state))
+        {
+            city.state = newValue.ToString();
+        }
+        else if (fieldName == nameof(IndianCity.region))
+        {
+            city.region = newValue.ToString();
+        }
+        else if (fieldName == nameof(IndianCity.Id))
+        {
+            city.Id = Int32.Parse(newValue.ToString());
+        }
+
+        InvokeAsync(StateHasChanged);
+    }
+    void OnSubmit(MouseEventArgs args) {
+        Console.WriteLine(city.CityName);
+
+    }
+
+}
