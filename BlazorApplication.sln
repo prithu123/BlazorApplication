@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "BlazorServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{7385CA94-D9E8-4EE6-8C3A-337ADF4DC621}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCosmos", "..\Users\prith\source\repos\AzureCosmos\AzureCosmos.csproj", "{AB1DE396-8862-4362-8EB2-0D0AB9E217DC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{7385CA94-D9E8-4EE6-8C3A-337ADF4DC621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7385CA94-D9E8-4EE6-8C3A-337ADF4DC621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7385CA94-D9E8-4EE6-8C3A-337ADF4DC621}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB1DE396-8862-4362-8EB2-0D0AB9E217DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB1DE396-8862-4362-8EB2-0D0AB9E217DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB1DE396-8862-4362-8EB2-0D0AB9E217DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB1DE396-8862-4362-8EB2-0D0AB9E217DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
